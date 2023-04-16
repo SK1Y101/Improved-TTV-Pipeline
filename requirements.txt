@@ -1,1 +1,4 @@
 nox >= 2022.11.21
+numpy == 1.24.2
+astropy == 5.2.2
+matplotlib == 3.7.1
