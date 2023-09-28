@@ -2,3 +2,5 @@ nox >= 2022.11.21
 numpy == 1.24.2
 astropy == 5.2.2
 matplotlib == 3.7.1
+rebound >= 3.28.2
+reboundx >= 3.10.1
