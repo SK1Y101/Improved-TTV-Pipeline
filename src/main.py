@@ -1,6 +1,9 @@
 import logging
 
+import astropy.units as u
+
 from planetary_system import system
+from simulation import Simulation
 from visualiser import SystemVisualiser
 
 logging.basicConfig(
@@ -8,10 +11,14 @@ logging.basicConfig(
 )
 
 if __name__ == "__main__":
-    sol = system.presets.solarSystem
+    sol = system.presets.innerPlanets
+    plot = SystemVisualiser(sol)
+    sim = Simulation(sol)
 
     sol.log_bodies()
 
-    sol.logger.info(sol.centre_of_mass)
+    sol.plot_system()
 
-    # sol.plot_system(style="simple")
+    sol.simulate(20 * u.day)
+
+    sol.plot_system()

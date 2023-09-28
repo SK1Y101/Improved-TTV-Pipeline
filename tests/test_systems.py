@@ -2,7 +2,7 @@ import astropy.constants as const
 import astropy.units as u
 import numpy as np
 
-from planetary_system import bodies
+from planetary_system import bodies, system
 
 pbodies = bodies.presets
 
@@ -25,3 +25,13 @@ class TestSystems:
         assert planet.density == properties["mass"] * 3 / (
             4 * properties["radius"] ** 3 * np.pi
         )
+
+    def test_log_system(self) -> None:
+        em = system.System("Earth-Moon")
+        earth = pbodies.Earth
+        moon = pbodies.Moon
+        em.add_body(earth)
+        earth.add_body(moon)
+
+        # READ SYSOUT
+        assert False

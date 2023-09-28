@@ -36,6 +36,11 @@ sudo apt install python3-pip
 pip install -r requirements.txt
 ```
 
+you can run with 
+```bash
+nox -e run
+```
+
 ### Development
 
 In Progress.
@@ -43,6 +48,7 @@ In Progress.
 ### Utility
 
 In Progress.
+
 ## References
 
 Lloyd-Walters J., Futcher S., Thomas D., Assadullahi H., 2022, [Determining The Parameters of Exoplanetary Candidates From Transit Timing Variation](https://lloydwaltersj.com/projects/TransitProject/)
